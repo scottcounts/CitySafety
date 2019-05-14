@@ -1,4 +1,4 @@
-# CitySafety
+# City Safety Analytics
 Notebooks for analytics with city safety data from Azure Open Datasets
 
 Azure Open Datasets provides access to historial city safety data (911 and 311 call data) from 5 U.S. cities: Seattle, San Francisco, Boston, New York, and Chicago. 
