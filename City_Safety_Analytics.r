@@ -127,7 +127,7 @@ safetyDF$category = lower(safetyDF$category)
 for(c in 1:length(cities)) {
   
   createOrReplaceTempView(safetyDF, "safetydf")
-  sql.str = paste0("SELECT * FROM safetydf WHERE subcategory rlike '",safety.use,"' or category rlike '",safety.use,"' and City = '",cities.data[c],"'")
+  sql.str = paste0("SELECT * FROM safetydf WHERE (subcategory rlike '",safety.use,"' or category rlike '",safety.use,"') and City = '",cities.data[c],"'")
   safety.df.single = SparkR::sql(sql.str)
 
   # clean up resulting data to remove NAs and records with invalid longitudes
